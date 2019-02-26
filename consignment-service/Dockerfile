@@ -4,7 +4,7 @@ WORKDIR /go/src/github.com/corvofdeath/shippy/consignment-service
 
 COPY . .
 
-RUN go get -d .
+RUN go get -v 
 RUN CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo .
 
 FROM alpine:latest

@@ -3,11 +3,9 @@
 
 package go_micro_srv_consignment
 
-import (
-	fmt "fmt"
-	proto "github.com/golang/protobuf/proto"
-	math "math"
-)
+import proto "github.com/golang/protobuf/proto"
+import fmt "fmt"
+import math "math"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
@@ -18,7 +16,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
+const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type Consignment struct {
 	Id                   string       `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
@@ -35,17 +33,16 @@ func (m *Consignment) Reset()         { *m = Consignment{} }
 func (m *Consignment) String() string { return proto.CompactTextString(m) }
 func (*Consignment) ProtoMessage()    {}
 func (*Consignment) Descriptor() ([]byte, []int) {
-	return fileDescriptor_e5e5ab05dfa973d5, []int{0}
+	return fileDescriptor_consignment_528e82227b965d8f, []int{0}
 }
-
 func (m *Consignment) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Consignment.Unmarshal(m, b)
 }
 func (m *Consignment) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Consignment.Marshal(b, m, deterministic)
 }
-func (m *Consignment) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Consignment.Merge(m, src)
+func (dst *Consignment) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Consignment.Merge(dst, src)
 }
 func (m *Consignment) XXX_Size() int {
 	return xxx_messageInfo_Consignment.Size(m)
@@ -105,17 +102,16 @@ func (m *Container) Reset()         { *m = Container{} }
 func (m *Container) String() string { return proto.CompactTextString(m) }
 func (*Container) ProtoMessage()    {}
 func (*Container) Descriptor() ([]byte, []int) {
-	return fileDescriptor_e5e5ab05dfa973d5, []int{1}
+	return fileDescriptor_consignment_528e82227b965d8f, []int{1}
 }
-
 func (m *Container) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Container.Unmarshal(m, b)
 }
 func (m *Container) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Container.Marshal(b, m, deterministic)
 }
-func (m *Container) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Container.Merge(m, src)
+func (dst *Container) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Container.Merge(dst, src)
 }
 func (m *Container) XXX_Size() int {
 	return xxx_messageInfo_Container.Size(m)
@@ -164,17 +160,16 @@ func (m *GetRequest) Reset()         { *m = GetRequest{} }
 func (m *GetRequest) String() string { return proto.CompactTextString(m) }
 func (*GetRequest) ProtoMessage()    {}
 func (*GetRequest) Descriptor() ([]byte, []int) {
-	return fileDescriptor_e5e5ab05dfa973d5, []int{2}
+	return fileDescriptor_consignment_528e82227b965d8f, []int{2}
 }
-
 func (m *GetRequest) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_GetRequest.Unmarshal(m, b)
 }
 func (m *GetRequest) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_GetRequest.Marshal(b, m, deterministic)
 }
-func (m *GetRequest) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_GetRequest.Merge(m, src)
+func (dst *GetRequest) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_GetRequest.Merge(dst, src)
 }
 func (m *GetRequest) XXX_Size() int {
 	return xxx_messageInfo_GetRequest.Size(m)
@@ -198,17 +193,16 @@ func (m *Response) Reset()         { *m = Response{} }
 func (m *Response) String() string { return proto.CompactTextString(m) }
 func (*Response) ProtoMessage()    {}
 func (*Response) Descriptor() ([]byte, []int) {
-	return fileDescriptor_e5e5ab05dfa973d5, []int{3}
+	return fileDescriptor_consignment_528e82227b965d8f, []int{3}
 }
-
 func (m *Response) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Response.Unmarshal(m, b)
 }
 func (m *Response) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Response.Marshal(b, m, deterministic)
 }
-func (m *Response) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Response.Merge(m, src)
+func (dst *Response) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Response.Merge(dst, src)
 }
 func (m *Response) XXX_Size() int {
 	return xxx_messageInfo_Response.Size(m)
@@ -248,10 +242,10 @@ func init() {
 }
 
 func init() {
-	proto.RegisterFile("proto/consignment/consignment.proto", fileDescriptor_e5e5ab05dfa973d5)
+	proto.RegisterFile("proto/consignment/consignment.proto", fileDescriptor_consignment_528e82227b965d8f)
 }
 
-var fileDescriptor_e5e5ab05dfa973d5 = []byte{
+var fileDescriptor_consignment_528e82227b965d8f = []byte{
 	// 351 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x8c, 0x92, 0x4f, 0x4e, 0xeb, 0x30,
 	0x10, 0x87, 0x5f, 0xfa, 0x3f, 0x93, 0xea, 0x55, 0x78, 0x01, 0x16, 0x2c, 0x88, 0x52, 0x90, 0xba,

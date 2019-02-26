@@ -3,11 +3,9 @@
 
 package go_micro_srv_vessel
 
-import (
-	fmt "fmt"
-	proto "github.com/golang/protobuf/proto"
-	math "math"
-)
+import proto "github.com/golang/protobuf/proto"
+import fmt "fmt"
+import math "math"
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal
@@ -18,7 +16,7 @@ var _ = math.Inf
 // is compatible with the proto package it is being compiled against.
 // A compilation error at this line likely means your copy of the
 // proto package needs to be updated.
-const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
+const _ = proto.ProtoPackageIsVersion2 // please upgrade the proto package
 
 type Vessel struct {
 	Id                   string   `protobuf:"bytes,1,opt,name=id,proto3" json:"id,omitempty"`
@@ -36,17 +34,16 @@ func (m *Vessel) Reset()         { *m = Vessel{} }
 func (m *Vessel) String() string { return proto.CompactTextString(m) }
 func (*Vessel) ProtoMessage()    {}
 func (*Vessel) Descriptor() ([]byte, []int) {
-	return fileDescriptor_04ef66862bb50716, []int{0}
+	return fileDescriptor_vessel_770bae4e696d5d4d, []int{0}
 }
-
 func (m *Vessel) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Vessel.Unmarshal(m, b)
 }
 func (m *Vessel) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Vessel.Marshal(b, m, deterministic)
 }
-func (m *Vessel) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Vessel.Merge(m, src)
+func (dst *Vessel) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Vessel.Merge(dst, src)
 }
 func (m *Vessel) XXX_Size() int {
 	return xxx_messageInfo_Vessel.Size(m)
@@ -111,17 +108,16 @@ func (m *Specification) Reset()         { *m = Specification{} }
 func (m *Specification) String() string { return proto.CompactTextString(m) }
 func (*Specification) ProtoMessage()    {}
 func (*Specification) Descriptor() ([]byte, []int) {
-	return fileDescriptor_04ef66862bb50716, []int{1}
+	return fileDescriptor_vessel_770bae4e696d5d4d, []int{1}
 }
-
 func (m *Specification) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Specification.Unmarshal(m, b)
 }
 func (m *Specification) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Specification.Marshal(b, m, deterministic)
 }
-func (m *Specification) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Specification.Merge(m, src)
+func (dst *Specification) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Specification.Merge(dst, src)
 }
 func (m *Specification) XXX_Size() int {
 	return xxx_messageInfo_Specification.Size(m)
@@ -158,17 +154,16 @@ func (m *Response) Reset()         { *m = Response{} }
 func (m *Response) String() string { return proto.CompactTextString(m) }
 func (*Response) ProtoMessage()    {}
 func (*Response) Descriptor() ([]byte, []int) {
-	return fileDescriptor_04ef66862bb50716, []int{2}
+	return fileDescriptor_vessel_770bae4e696d5d4d, []int{2}
 }
-
 func (m *Response) XXX_Unmarshal(b []byte) error {
 	return xxx_messageInfo_Response.Unmarshal(m, b)
 }
 func (m *Response) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
 	return xxx_messageInfo_Response.Marshal(b, m, deterministic)
 }
-func (m *Response) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_Response.Merge(m, src)
+func (dst *Response) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_Response.Merge(dst, src)
 }
 func (m *Response) XXX_Size() int {
 	return xxx_messageInfo_Response.Size(m)
@@ -199,9 +194,9 @@ func init() {
 	proto.RegisterType((*Response)(nil), "go.micro.srv.vessel.Response")
 }
 
-func init() { proto.RegisterFile("proto/vessel/vessel.proto", fileDescriptor_04ef66862bb50716) }
+func init() { proto.RegisterFile("proto/vessel/vessel.proto", fileDescriptor_vessel_770bae4e696d5d4d) }
 
-var fileDescriptor_04ef66862bb50716 = []byte{
+var fileDescriptor_vessel_770bae4e696d5d4d = []byte{
 	// 290 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x51, 0xc1, 0x4a, 0xc3, 0x40,
 	0x10, 0x75, 0xd3, 0x36, 0x4d, 0x47, 0xe2, 0x61, 0xbd, 0x6c, 0xab, 0x85, 0x90, 0x53, 0x4e, 0x2b,

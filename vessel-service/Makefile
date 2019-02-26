@@ -1,6 +1,5 @@
-
 build:
-	protoc -I. --plugin=protoc-gen-go=$(GOPATH)/bin/protoc-gen-go --plugin=protoc-gen-micro=$(GOPATH)/bin/protoc-gen-micro --proto_path=$(GOPATH)/src:. --micro_out=. --go_out=. proto/vessel/vessel.proto
+	protoc --proto_path=$(GOPATH)/src:. --micro_out=. --go_out=. proto/vessel/vessel.proto
 	docker build -t vessel-service .
 
 run:
